@@ -127,6 +127,32 @@ rules:
 - apiGroups:
   - templates.kluctl.io
   resources:
+  - listgithubdeployments
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - templates.kluctl.io
+  resources:
+  - listgithubdeployments/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - templates.kluctl.io
+  resources:
+  - listgithubdeployments/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - templates.kluctl.io
+  resources:
   - listgithubpullrequests
   verbs:
   - create
